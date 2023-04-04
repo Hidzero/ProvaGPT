@@ -1,16 +1,17 @@
-// variavel pergunta 
+// const pergunta pega pelo id atraves do DOM
 const pergunta = document.getElementById('pergunta');
-
+// const resultado pega pelo id atraves do DOM
 const resultado = document.getElementById('resultado');
+// Mantem a chave da API guardada
+const OPEN_API_KEY = "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"
 
-const OPEN_API_KEY = "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"
-
+// Se a pergunta tiver valor e o "Enter" for pressionado ele executa a função 
 pergunta.addEventListener('keypress', (e)=>{
     if(pergunta.value && e.key === 'Enter')
     enviarPergunta();
 });
 
-
+// Função para enviar a pergunta ao chat e retornar a resposta
 function enviarPergunta() {
     var sQuestion = pergunta.value;
 
@@ -29,6 +30,7 @@ function enviarPergunta() {
         }),
     })
         .then((response) => response.json())
+        // Tratativa de erro caso de problema na api
         .then((json) => {
             if(resultado.value) resultado.value += '\n'
 
@@ -47,7 +49,7 @@ function enviarPergunta() {
             pergunta.focus();
         });
 
-    if(resultado.value) resultado.value += '\n\n\n';
+    if(resultado.value) resultado.value += '';
     resultado.value += `Eu: ${sQuestion}`
     pergunta.value = 'So um momento, estou pensando...'
     pergunta.disabled = true;
