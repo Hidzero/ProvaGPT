@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgb(128, 128, 128);
+}
+
+ul {
+    list-style: none;
+    background-color: rgb(49, 49, 49, 0.534);
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu li a{
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    background-color : rgb(61, 61, 61);
+}
+
+.content {
+    display: flex;
+    padding-top: 10vw;
+}
+
+.cr {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.crs {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.crs input {
+    display: none;
+}
+
+.sl {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.sl img {
+    width: 800px;
+}
+
+.mn-nv { 
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.mn-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.mn-btn:not(:last-child) {
+    margin-right: 40px;   
+}
+
+.mn-btn:hover {
+    background-color: #fff;
+}
+
+#rd1:checked ~ .first {
+    margin-left: 0;
+}
+
+#rd2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#rd3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#rd4:checked ~ .first {
+    margin-left: -75%;
+}
+
+.nv-auto div {
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.nv-auto { 
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.nv-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#rd1:checked ~ .nv-auto .auto-btn1 {
+    background-color: #fff;
+}
+
+#rd2:checked ~ .nv-auto .auto-btn2 {
+    background-color: #fff;
+}
+
+#rd3:checked ~ .nv-auto .auto-btn3 {
+    background-color: #fff;
+}
+
+#rd4:checked ~ .nv-auto .auto-btn4 {
+    background-color: #fff;
+}
